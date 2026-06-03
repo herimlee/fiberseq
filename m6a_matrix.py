@@ -214,7 +214,7 @@ def a_methylation(read):
     As = rposs_of_query[ qu_poss_of_As ]
     mAs = rposs_of_query[ qu_poss_of_As[indices_of_mAs] ]
     
-    uAs = np.setdiff1d(AsmAs, assume_unique=True), 
+    uAs = np.setdiff1d(As, mAs, assume_unique=True), 
 
     return np.array(mAs, dtype=np.int32), np.array(uAs, dtype=np.int32)
 
